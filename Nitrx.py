@@ -79,8 +79,8 @@ def uslist():
     ips = p.readlines()
     for i in lines:
         code = i.strip()
-        g = open('results/gods.txt', 'a')
-        b = open('results/bads.txt', 'a')
+        g = open('gods.txt', 'a')
+        b = open('bads.txt', 'a')
         s = requests.session()
         ip = random.choice(ips)
         ip = str(ip).replace('\n', '')
@@ -97,7 +97,7 @@ def uslist():
 
 
 def Generator():
-    file = open('results/gen.txt', 'a')
+    file = open('gen.txt', 'a')
     try:
         amount = int(input("     [?] amount of codes: "))
         cln = int(input("     [?] Code Letters number: "))
@@ -121,8 +121,8 @@ def auto():
     fix = 1
     print(GREEN+"     [?] Table info : Code - Status - Type\n")
     while fix <= amount:
-        g = open('results/gods.txt', 'a')
-        b = open('results/bads.txt', 'a')
+        g = open('gods.txt', 'a')
+        b = open('bads.txt', 'a')
         s = requests.session()
         ip = random.choice(lines)
         ip = str(ip).replace('\n', '')
@@ -134,7 +134,7 @@ def auto():
         }
         headers['User-Agent'] = ua.random
         code = ('').join(random.choices(string.ascii_letters + string.digits, k=cln))
-        a = open("results/bads.txt", "r")
+        a = open("bads.txt", "r")
         time.sleep(0.001)
 
         if code in a.read():
@@ -154,7 +154,7 @@ if __name__ == "__main__":
     ██║╚██╗██║██║   ██║   ██╔══██╗ ██╔██╗ 
     ██║ ╚████║██║   ██║   ██║  ██║██╔╝ ██╗
     ╚═╝  ╚═══╝╚═╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝\n
-                {}By {}@BrahimJarrar\n
+                {}By {}@BrahimJarrar | Modded by Emlin\n
 
         1{}- {}[{}Auto{}]{} Generator and Scann
         {}2{}- {}Check Codes From {}[{}LIST{}]
