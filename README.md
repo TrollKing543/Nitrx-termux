@@ -13,3 +13,5 @@ How to Install:
 7. Wait for it to finish!
 8. Type "python Nitrx.py"
 9. Profit???
+
+Proxies need to be put into the proxy.txt
